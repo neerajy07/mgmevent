@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/index\.php$
+RewriteRule ^(.*)$ https://www.mgmevents.in/ [R=301,L]
+
+
+# Remove .php extension and handle requests without .php extension
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+RewriteEngine on
+SetEnvIfNoCase User-Agent "^HTTrack" bad_bot
+Deny from env=bad_bot

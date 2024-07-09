@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    background-color: black;
+}
+
+.header {
+    margin-top: 100px;
+    font-size: 22px;
+    line-height: 1.125;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    /* overflow-wrap: break-word; */
+    font-family: 'cinzel', Georgia, serif;
+    letter-spacing: normal;
+    box-sizing: inherit;
+    display: block;
+    text-align: center;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.12);
+}
+
+.header::first-letter {
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin-top: 190px;
+}
+
+.head h3 {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.head h3::first-letter {
+    font-size: 2.1rem;
+    font-family: 'Source Sans Pro', arial, sans-serif;
+}
+
+.line {
+    width: 350px;
+    height: 2px;
+    background: white;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+    margin: 30px 60px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -25px;
+}
+
+.slider-wrapper .image-lists {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-wrapper .image-lists::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-lists .image-items {
+    min-width: 325px !important;
+    height: 300px !important;
+    object-fit: cover ;
+}
+
+.container .slider-scrollbar {
+    height: 27px;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100% !important;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+.name{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #aaa;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 999;
+}
+
+/* control Image Width And Height */
+
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50% !important;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.image-lists img {
+    border-radius: 5px !important;
+}
+
+#arrow {
+    margin-right: 30px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+        display: none !important;
+    }
+
+    .slider-wrapper .image-lists {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider-wrapper .image-lists .image-items {
+        min-width: 160px;
+        height: 210px;
+    }
+
+    .slider-scrollbar .scrollbar-thumb {
+        width: 20%;
+    }
+    .header{
+        font-size: 16px;
+    }
+    .head h3{
+        font-size: 10px;
+        display: inline-block;
+    }
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 80px;
+}
+
+.more .btn-primary {
+    margin-top: 90px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: white !important;
+    color: black !important;
+    border-top-left-radius: 5%;
+    padding: 10px 17px;
+    font-size: 16px;
+    font-weight: 550;
+    text-transform: uppercase;
+    opacity: 0.8;
+    background-color: #aaa;
+
+}
+/* Styles for screens less than or equal to 320px wide */
+@media only screen and (max-width: 320px) {
+    /* CSS rules for screens <= 320px */
+  }
+  
+  /* Styles for screens between 321px and 768px wide */
+  @media only screen and (min-width: 321px) and (max-width: 768px) {
+    /* CSS rules for screens between 321px and 768px */
+    .more.header{
+        max-width: 400px;
+        width: 50%;
+        font-size: 10px;
+        margin: 0 auto;
+    }
+    .slider-wrapper .image-lists .image-items {
+        min-width: 205px !important;
+        height: 200px !important;
+        object-fit: cover ;
+    }
+    
+  }
+  
+  /* Styles for screens greater than or equal to 769px wide */
+  @media only screen and (min-width: 769px) {
+    /* CSS rules for screens >= 769px */
+  }

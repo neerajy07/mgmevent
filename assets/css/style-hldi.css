@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    
+
+
+.function{
+    background-color: black;
+    color: #a5a5a5;
+}
+
+
+.function a{
+  text-decoration: none;
+}
+.function:hover, .function:active{
+    background-color: #a97627;
+}
+.heading-link:hover{
+    color:black;
+
+}
+.heading-link{
+    color: #a97627;
+    font-size: 18px;
+    margin-left: 25px;
+
+}
+.h4{
+    color: #a97627;
+}
+.content-1{
+    color: #a5a5a5;
+}
+.img-gal:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+@media screen and (max-width: 760px) {
+    .function {
+        padding: 8px;
+         margin-left: 100px; /* Adjust padding */
+         margin-bottom: 10px;
+    }
+
+    .heading-link {
+        font-size: 14px; /* Further reduce font size */
+        margin-left: 10px; /* Further adjust margin */
+    }
+
+    .h4 {
+        font-size: 16px; /* Further reduce font size */
+    }
+}
